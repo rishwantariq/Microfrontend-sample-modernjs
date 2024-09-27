@@ -1,6 +1,6 @@
 **Microfrontend Sample with Modern.js**
 
-A demonstration of Microfrontend implementation using Modern.js 2.
+**A demonstration of Microfrontend implementation using Modern.js 2.**
 
 **_Overview_**
 In Modern.js, there are two primary ways to handle routing:
@@ -38,34 +38,26 @@ Custom Control: Advanced routing logic and more control over route behavior.
 **Getting Started**
 
 **Setup**
-Install the dependencies:
 
-**bash**
-Copy code
-npm install
-Development Server
-Start the development server:
+**Install the dependencies:**
+_npm install_
 
-**bash**
-Copy code
-npm run dev
-Enable Features or Add Entries
+**Development Server**
+**Start the development server:**
+_npm run dev_
+
+**Enable Features or Add Entries**
+
 Add optional features or new entries with:
+_npm run new_
 
-**bash**
-Copy code
-npm run new
-Production Build
+**Production Build**
+
 Build the app for production:
+_npm run build_
 
-**bash**
-Copy code
-npm run build
-Preview Production Build Locally
-Preview the production build:
+**Preview Production Build Locally**
+_npm run serve_
 
-**bash**
-Copy code
-npm run serve
-Documentation
+**Documentation**
 For more detailed information, check out the Modern.js documentation.
