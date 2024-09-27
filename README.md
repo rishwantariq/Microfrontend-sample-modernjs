@@ -1,7 +1,7 @@
 Microfrontend Sample with Modern.js
-A demonstration of Microfrontend implementation using Modern.js 2.
-
-Overview
+**A demonstration of Microfrontend implementation using Modern.js 2.
+**
+**_Overview_**
 In Modern.js, there are two primary ways to handle routing:
 
 File-Based Routing (Automatic)
@@ -30,10 +30,10 @@ Manual Routing: Necessary for microfrontends, dynamic imports, or custom routing
 Summary
 Manual routing is used in this project for:
 
-Microfrontend Integration: Dynamically loading external sub-apps.
+**_Microfrontend Integration_**: Dynamically loading external sub-apps.
 Custom Control: Advanced routing logic and more control over route behavior.
-Getting Started
-Setup
+**Getting Started
+**Setup
 Install the dependencies:
 
 bash
