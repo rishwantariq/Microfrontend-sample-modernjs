@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Microfrontend-sample-modernjs
 Microfrontend demonstration with Modern.js 2
 
@@ -30,3 +31,42 @@ Summary of Why We Use App.tsx for Manual Routing in MainApp:
 Microfrontend Integration: We need dynamic, manual control to load microfrontends.
 Dynamic Sub-App Loading: File-based routing doesn’t support dynamic loading of external sub-apps from separate projects.
 Custom Control: Manual routing allows for custom route logic, which is essential for advanced scenarios like microfrontends.
+=======
+# Modern.js App
+
+## Setup
+
+Install the dependencies:
+
+```bash
+npm install
+```
+
+## Get Started
+
+Start the dev server:
+
+```bash
+npm dev
+```
+
+Enable optional features or add a new entry:
+
+```bash
+npm new
+```
+
+Build the app for production:
+
+```bash
+npm build
+```
+
+Preview the production build locally:
+
+```bash
+npm serve
+```
+
+For more information, see the [Modern.js documentation](https://modernjs.dev/en).
+>>>>>>> 904aef9 (feat: init)
