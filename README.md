@@ -1,20 +1,21 @@
-Microfrontend Sample with Modern.js
-**A demonstration of Microfrontend implementation using Modern.js 2.
-**
+**Microfrontend Sample with Modern.js**
+
+A demonstration of Microfrontend implementation using Modern.js 2.
+
 **_Overview_**
 In Modern.js, there are two primary ways to handle routing:
 
-File-Based Routing (Automatic)
+**File-Based Routing (Automatic)**
 Manual Routing (Code-Defined)
 This project utilizes manual routing in the main app due to the complexities involved in handling microfrontends like Table and Dashboard sub-apps. Below, we'll explain the key differences and why manual routing is necessary in this scenario.
 
-File-Based Routing (Automatic)
+**File-Based Routing (Automatic)**
 In file-based routing, routes are generated automatically based on the file structure in the src/routes/ directory. For example:
 
 A file at src/routes/home.tsx will automatically create a route /home.
 This approach is straightforward and works for simple applications, but it can be restrictive for more complex use cases, such as integrating microfrontends.
 
-Manual Routing (Code-Defined)
+**Manual Routing (Code-Defined)**
 In manual routing, developers have full control over route definitions. This flexibility is essential when working with microfrontends due to the need for:
 
 Dynamic Sub-App Loading: The useModuleApps() hook is used to dynamically load and render sub-apps (like Table and Dashboard).
@@ -27,40 +28,43 @@ More Control: You have more flexibility to apply advanced logic, such as access 
 When to Use Each Approach:
 File-Based Routing: Ideal for applications with a simple, static structure.
 Manual Routing: Necessary for microfrontends, dynamic imports, or custom routing logic.
-Summary
+
+
+**Summary**
 Manual routing is used in this project for:
 
 **_Microfrontend Integration_**: Dynamically loading external sub-apps.
 Custom Control: Advanced routing logic and more control over route behavior.
-**Getting Started
-**Setup
+**Getting Started**
+
+**Setup**
 Install the dependencies:
 
-bash
+**bash**
 Copy code
 npm install
 Development Server
 Start the development server:
 
-bash
+**bash**
 Copy code
 npm run dev
 Enable Features or Add Entries
 Add optional features or new entries with:
 
-bash
+**bash**
 Copy code
 npm run new
 Production Build
 Build the app for production:
 
-bash
+**bash**
 Copy code
 npm run build
 Preview Production Build Locally
 Preview the production build:
 
-bash
+**bash**
 Copy code
 npm run serve
 Documentation
