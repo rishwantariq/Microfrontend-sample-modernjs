@@ -1,72 +1,67 @@
-<<<<<<< HEAD
-# Microfrontend-sample-modernjs
-Microfrontend demonstration with Modern.js 2
+Microfrontend Sample with Modern.js
+A demonstration of Microfrontend implementation using Modern.js 2.
 
-In Modern.js, there are two primary ways of handling routing: file-based routing (automatic) and manual routing (code-defined). Let's clarify why we are using App.tsx with manual routing in the main app, as opposed to the default file-based routing approach.
+Overview
+In Modern.js, there are two primary ways to handle routing:
 
-1. File-Based Routing (Automatic Routing)
-In file-based routing, the app automatically maps routes based on the folder and file structure in the src/routes/ directory. For example:
+File-Based Routing (Automatic)
+Manual Routing (Code-Defined)
+This project utilizes manual routing in the main app due to the complexities involved in handling microfrontends like Table and Dashboard sub-apps. Below, we'll explain the key differences and why manual routing is necessary in this scenario.
 
-If you have a file src/routes/home.tsx, it will automatically create a route /home.
-You don't need to define routes manually in code; Modern.js handles this for you based on file locations.
-This approach is easy to use and fits many common use cases where the route structure mirrors the file structure. However, it can become restrictive when you need more complex routing logic or custom behaviors, such as integrating microfrontend sub-applications that require dynamic loading and complex state management.
+File-Based Routing (Automatic)
+In file-based routing, routes are generated automatically based on the file structure in the src/routes/ directory. For example:
 
-2. Manual Routing (Code-Defined in App.tsx)
-In contrast, manual routing gives you full control over the routing logic. This is particularly useful when working with microfrontends, like in your case with Table and Dashboard sub-apps, because:
+A file at src/routes/home.tsx will automatically create a route /home.
+This approach is straightforward and works for simple applications, but it can be restrictive for more complex use cases, such as integrating microfrontends.
 
-Dynamic Sub-App Loading: You need to load microfrontends dynamically from separate applications. This involves using the useModuleApps() hook to fetch and render sub-app components.
-Custom Control: You might want custom route logic, such as checking for authentication before loading certain sub-apps, pre-loading data, or controlling when and how the sub-apps are displayed.
-Complex Routing: You may have to define nested routes, control parameters, and configure more complex path structures that are not easily handled by file-based routing.
-Why Manual Routing in App.tsx for Microfrontends?
-Dynamic Loading of Sub-Apps: The useModuleApps() hook dynamically loads sub-apps like Table and Dashboard. In file-based routing, routes are static and cannot dynamically fetch and render components from remote sub-apps. Manual routing allows you to programmatically load these microfrontend apps based on routes.
+Manual Routing (Code-Defined)
+In manual routing, developers have full control over route definitions. This flexibility is essential when working with microfrontends due to the need for:
 
-Microfrontend Integration: Since sub-apps are often developed as independent projects and may have their own internal routing, manual routing lets you define how these microfrontends are integrated into your main application. The <Table /> and <Dashboard /> components are injected dynamically, which isn’t something file-based routing handles well.
-
-More Control: You get more flexibility in handling sub-applications, especially if you need to implement conditions (e.g., authentication or user roles) before loading a sub-app.
-
+Dynamic Sub-App Loading: The useModuleApps() hook is used to dynamically load and render sub-apps (like Table and Dashboard).
+Custom Routing Logic: You can define advanced logic like authentication checks, nested routes, and data pre-loading.
+Microfrontend Integration: Since sub-apps may be independent projects, manual routing lets you control how they are integrated and displayed within the main app.
+Why Use Manual Routing for Microfrontends?
+Dynamic Loading of Sub-Apps: With manual routing, you can load microfrontends dynamically, which is not possible with file-based routing.
+Microfrontend Integration: Sub-apps, being independent, may have their own internal routing. Manual routing allows better control over how these sub-apps are injected and managed.
+More Control: You have more flexibility to apply advanced logic, such as access control or route conditions, which is often necessary for complex applications.
 When to Use Each Approach:
-File-Based Routing: Ideal when your application has a simple, static structure and you don’t need to load content or apps dynamically.
-Manual Routing (in App.tsx): Necessary when you're working with microfrontends, dynamic imports, authentication flows, or other custom logic that requires full control over routing.
-Summary of Why We Use App.tsx for Manual Routing in MainApp:
-Microfrontend Integration: We need dynamic, manual control to load microfrontends.
-Dynamic Sub-App Loading: File-based routing doesn’t support dynamic loading of external sub-apps from separate projects.
-Custom Control: Manual routing allows for custom route logic, which is essential for advanced scenarios like microfrontends.
-=======
-# Modern.js App
+File-Based Routing: Ideal for applications with a simple, static structure.
+Manual Routing: Necessary for microfrontends, dynamic imports, or custom routing logic.
+Summary
+Manual routing is used in this project for:
 
-## Setup
-
+Microfrontend Integration: Dynamically loading external sub-apps.
+Custom Control: Advanced routing logic and more control over route behavior.
+Getting Started
+Setup
 Install the dependencies:
 
-```bash
+bash
+Copy code
 npm install
-```
+Development Server
+Start the development server:
 
-## Get Started
+bash
+Copy code
+npm run dev
+Enable Features or Add Entries
+Add optional features or new entries with:
 
-Start the dev server:
-
-```bash
-npm dev
-```
-
-Enable optional features or add a new entry:
-
-```bash
-npm new
-```
-
+bash
+Copy code
+npm run new
+Production Build
 Build the app for production:
 
-```bash
-npm build
-```
+bash
+Copy code
+npm run build
+Preview Production Build Locally
+Preview the production build:
 
-Preview the production build locally:
-
-```bash
-npm serve
-```
-
-For more information, see the [Modern.js documentation](https://modernjs.dev/en).
->>>>>>> 904aef9 (feat: init)
+bash
+Copy code
+npm run serve
+Documentation
+For more detailed information, check out the Modern.js documentation.
